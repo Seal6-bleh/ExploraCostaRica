@@ -237,7 +237,30 @@ footer p {
     line-height: 1.6;
 }
 
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
 @media (max-widht: 900px) {
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .experiencias {
         grid-template-columns: repeat(2, 1fr);
@@ -260,6 +283,14 @@ footer p {
 }
 
 @media (max-width: 600px) {
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria img {
+        height: 220px;
+    }
 
     .experiencias {
         grid-template-columns: 1fr;
